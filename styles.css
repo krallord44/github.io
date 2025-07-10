@@ -1,3 +1,4 @@
+/* 1. EN ÜSTE: Değişkenler ve temel reset */
 :root {
   --primary: #2c3e50;
   --secondary: #3498db;
@@ -9,88 +10,71 @@
 
 * {
   box-sizing: border-box;
-}
-
-body {
   margin: 0;
   padding: 0;
+}
+
+/* 2. GÖVDE (body) */
+body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-sans);
 }
 
-header, footer {
-  text-align: center;
-  margin-bottom: 20px;
-}
-nav a {
-  color: #0366d6;
-  text-decoration: none;
-  margin: 0 10px;
-}
-nav a:hover {
-  text-decoration: underline;
-}
+/* 3. HEADER & NAV */
 header {
   background: white;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
-  z-index: 100;
   padding: 10px 20px;
 }
-
 header h1 {
   margin: 0;
   font-size: 1.5rem;
-  display: inline-block;
   color: var(--primary);
-}
-
-nav {
   display: inline-block;
+}
+nav {
   float: right;
 }
-
 nav a {
   color: var(--primary);
   margin-left: 20px;
   text-decoration: none;
-  font-weight: 500;
   padding: 5px;
-  transition: color 0.2s, background 0.2s;
+  transition: background 0.2s, color 0.2s;
 }
-
 nav a:hover {
-  color: white;
   background: var(--secondary);
+  color: white;
   border-radius: 4px;
 }
+
+/* 4. ANA İÇERİK */
 main {
   max-width: 700px;
   margin: 40px auto;
   line-height: 1.8;
-  padding: 0 20px;
   background: white;
   border-radius: 8px;
+  padding: 20px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
-
 main h2 {
   color: var(--secondary);
   margin-top: 1.5em;
 }
+
+/* 5. FOOTER */
 footer {
   text-align: center;
   padding: 20px;
   background: var(--primary);
   color: white;
-  position: relative;
 }
-footer p {
-  margin: 0;
-  font-size: 0.9rem;
-}
+
+/* 6. HERO ve BUTON */
 .hero {
   background: var(--secondary);
   color: white;
@@ -98,12 +82,11 @@ footer p {
   text-align: center;
 }
 .hero h2 {
-  margin: 0 0 10px;
+  margin-bottom: 10px;
   font-size: 2rem;
 }
 .hero p {
-  max-width: 500px;
-  margin: 0 auto 20px;
+  margin-bottom: 20px;
 }
 .btn {
   display: inline-block;
