@@ -1,103 +1,136 @@
-/* 1. EN ÜSTE: Değişkenler ve temel reset */
+/* 1. Değişkenler */
 :root {
-  --primary: #2c3e50;
-  --secondary: #3498db;
-  --text: #2c3e50;
-  --bg: #f4f7fa;
-  --accent: #e74c3c;
-  --font-sans: 'Segoe UI', Tahoma, sans-serif;
+  --color-primary:   #233d77;
+  --color-accent:    #0077cc;
+  --color-accent-alt:#34aadc;
+  --color-text:      #333;
+  --color-bg:        #fff;
+  --color-light:     #f5f8fc;
+  --font-heading:  'Poppins', sans-serif;
+  --font-body:     'Open Sans', sans-serif;
+  --header-height:    80px;
+  --nav-link-gap:     30px;
+  --hero-padding:     100px 20px;
+  --btn-padding:      12px 28px;
+  --btn-radius:       4px;
+  --font-h1: 3rem;
+  --font-h2: 1.25rem;
+  --font-base:16px;
 }
 
+/* 2. Reset & Temel */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-
-/* 2. GÖVDE (body) */
 body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
+  font-size: var(--font-base);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
 }
 
-/* 3. HEADER & NAV */
+/* 3. Header */
 header {
-  background: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  padding: 10px 20px;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--header-height);
+  background: var(--color-bg);
+  display: flex; align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  z-index: 1000;
 }
-header h1 {
-  margin: 0;
+header .logo {
+  font-family: var(--font-heading);
   font-size: 1.5rem;
-  color: var(--primary);
-  display: inline-block;
+  color: var(--color-primary);
+  text-decoration: none;
 }
 nav {
-  float: right;
+  display: flex; gap: var(--nav-link-gap);
 }
 nav a {
-  color: var(--primary);
-  margin-left: 20px;
+  font-size: var(--font-base);
+  color: var(--color-text);
   text-decoration: none;
-  padding: 5px;
-  transition: background 0.2s, color 0.2s;
+  padding: 8px 0;
+  transition: color .2s;
 }
-nav a:hover {
-  background: var(--secondary);
-  color: white;
-  border-radius: 4px;
-}
+nav a:hover { color: var(--color-accent); }
 
-/* 4. ANA İÇERİK */
-main {
-  max-width: 700px;
-  margin: 40px auto;
-  line-height: 1.8;
-  background: white;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+/* 4. CTA Buton (header sağı) */
+.btn-cta {
+  background: var(--color-accent);
+  color: #fff;
+  padding: var(--btn-padding);
+  border-radius: var(--btn-radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background .2s;
 }
-main h2 {
-  color: var(--secondary);
-  margin-top: 1.5em;
-}
+.btn-cta:hover { background: var(--color-accent-alt); }
 
-/* 5. FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: var(--primary);
-  color: white;
-}
-
-/* 6. HERO ve BUTON */
+/* 5. Hero Bölümü */
 .hero {
-  background: var(--secondary);
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
+  padding: var(--hero-padding);
+  padding-top: calc(var(--header-height) + 60px);
+  background: var(--color-light);
+  display: flex; align-items: center;
+  justify-content: space-between;
+  gap: 40px;
 }
-.hero h2 {
-  margin-bottom: 10px;
-  font-size: 2rem;
-}
-.hero p {
+.hero-content { max-width: 50%; }
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: var(--font-h1);
+  line-height: 1.1;
+  color: var(--color-primary);
   margin-bottom: 20px;
 }
-.btn {
-  display: inline-block;
-  background: var(--accent);
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
+.hero h1 .highlight {
+  background: var(--color-accent-alt);
+  color: #fff;
+  padding: 4px 8px;
   border-radius: 4px;
-  font-weight: 600;
-  transition: background 0.2s;
 }
-.btn:hover {
-  background: #c0392b;
+.hero p {
+  font-size: var(--font-h2);
+  margin-bottom: 30px;
+  color: var(--color-text);
+}
+.hero-buttons {
+  display: flex; gap: 20px;
+}
+.btn-outline {
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  padding: var(--btn-padding);
+  border-radius: var(--btn-radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background .2s, color .2s;
+}
+.btn-outline:hover {
+  background: var(--color-accent);
+  color: #fff;
+}
+.btn-solid {
+  background: var(--color-accent);
+  color: #fff;
+  padding: var(--btn-padding);
+  border-radius: var(--btn-radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background .2s;
+}
+.btn-solid:hover { background: var(--color-accent-alt); }
+
+/* 6. Responsive */
+@media (max-width: 900px) {
+  .hero { flex-direction: column; text-align: center; }
+  .hero-content { max-width: 100%; }
 }
