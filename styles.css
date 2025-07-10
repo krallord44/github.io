@@ -1,21 +1,21 @@
 /* 1. Değişkenler */
 :root {
-  --color-primary:   #233d77;
-  --color-accent:    #0077cc;
-  --color-accent-alt:#34aadc;
-  --color-text:      #333;
-  --color-bg:        #fff;
-  --color-light:     #f5f8fc;
-  --font-heading:  'Poppins', sans-serif;
-  --font-body:     'Open Sans', sans-serif;
+  --color-primary:    #233d77;
+  --color-accent:     #0077cc;
+  --color-accent-alt: #34aadc;
+  --color-text:       #333;
+  --color-bg:         #fff;
+  --color-light:      #f5f8fc;
+  --font-heading:     'Poppins', sans-serif;
+  --font-body:        'Open Sans', sans-serif;
   --header-height:    80px;
   --nav-link-gap:     30px;
   --hero-padding:     100px 20px;
   --btn-padding:      12px 28px;
   --btn-radius:       4px;
-  --font-h1: 3rem;
-  --font-h2: 1.25rem;
-  --font-base:16px;
+  --font-h1:          3rem;
+  --font-h2:          1.25rem;
+  --font-base:        16px;
 }
 
 /* 2. Reset & Temel */
@@ -60,7 +60,9 @@ nav a {
   padding: 8px 0;
   transition: color .2s;
 }
-nav a:hover { color: var(--color-accent); }
+nav a:hover {
+  color: var(--color-accent);
+}
 
 /* 4. CTA Buton (header sağı) */
 .btn-cta {
@@ -72,18 +74,24 @@ nav a:hover { color: var(--color-accent); }
   font-weight: 600;
   transition: background .2s;
 }
-.btn-cta:hover { background: var(--color-accent-alt); }
+.btn-cta:hover {
+  background: var(--color-accent-alt);
+}
 
 /* 5. Hero Bölümü */
 .hero {
   padding: var(--hero-padding);
   padding-top: calc(var(--header-height) + 60px);
   background: var(--color-light);
-  display: flex; align-items: center;
-  justify-content: space-between;
+  display: flex; 
+  align-items: center;
+  justify-content: flex-start;  /* space-between → flex-start */
   gap: 40px;
 }
-.hero-content { max-width: 50%; }
+.hero-content {
+  flex: 0 0 50%;      /* genişliği %50’ye sabitle */
+  padding-left: 5%;   /* soldan yüzde 5 boşluk */
+}
 .hero h1 {
   font-family: var(--font-heading);
   font-size: var(--font-h1);
@@ -127,10 +135,19 @@ nav a:hover { color: var(--color-accent); }
   font-weight: 600;
   transition: background .2s;
 }
-.btn-solid:hover { background: var(--color-accent-alt); }
+.btn-solid:hover {
+  background: var(--color-accent-alt);
+}
 
 /* 6. Responsive */
 @media (max-width: 900px) {
-  .hero { flex-direction: column; text-align: center; }
-  .hero-content { max-width: 100%; }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-content,
+  .hero-media {
+    flex: 0 0 100%;
+    padding-left: 0;
+  }
 }
