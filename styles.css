@@ -90,7 +90,7 @@ nav a:hover {
 }
 .hero-content {
   flex: 0 0 50%;      /* genişliği %50’ye sabitle */
-  padding-left: 5%;   /* soldan yüzde 5 boşluk */
+  padding-left: 15%;   /* soldan yüzde 5 boşluk */
 }
 .hero h1 {
   font-family: var(--font-heading);
