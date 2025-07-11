@@ -170,7 +170,7 @@ nav a:hover {
 /* Partner başlığını ortala ve büyüt */
 .partners h2 {
   text-align: center;
-  font-size: 2.5rem;          /* Burayı ihtiyacınıza göre artırabilirsiniz */
+  font-size: 5rem;          /* Burayı ihtiyacınıza göre artırabilirsiniz */
   line-height: 1.2;
   margin: 60px auto;          /* Üst ve altta boşluk bırakır */
   max-width: 800px;           /* Satır uzunluğu kontrolü */
