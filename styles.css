@@ -85,12 +85,12 @@ nav a:hover {
   background: var(--color-light);
   display: flex; 
   align-items: center;
-  justify-content: flex-start;  /* space-between → flex-start */
-  gap: 40px;
+  justify-content: flex-start;
+  gap: 15%;              /* metin ile görsel arası boşluk - %15 */
 }
 .hero-content {
-  flex: 0 0 50%;      /* genişliği %50’ye sabitle */
-  padding-left: 15%;   /* soldan yüzde 5 boşluk */
+  flex: 0 0 42.5%;       /* soldaki blok genişliği */
+  padding-left: 5%;      /* isteğe bağlı iç girinti */
 }
 .hero h1 {
   font-family: var(--font-heading);
@@ -137,6 +137,16 @@ nav a:hover {
 }
 .btn-solid:hover {
   background: var(--color-accent-alt);
+}
+.hero-media {
+  flex: 0 0 42.5%;       /* sağdaki blok genişliği */
+  display: flex;
+  justify-content: center;
+}
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* 6. Responsive */
