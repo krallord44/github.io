@@ -156,7 +156,7 @@ nav a:hover {
 
 /* 7. Hero Altındaki Metin */
 .hero-subtext {
-  margin-top: 10%;             /* Hero ile arasında yüzde 10 boşluk */
+  margin-top: 10%;        /* Hero ile arasında yüzde 10 boşluk */
   text-align: center;
 }
 .hero-subtext p {
@@ -167,11 +167,13 @@ nav a:hover {
   margin: 0 auto;
   line-height: 1.5;
 }
-/* Partner başlığını ortala ve büyüt */
+
+/* 8. Partner Başlığını Ortala ve Büyüt */
 .partners h2 {
   text-align: center;
-  font-size: 5rem;          /* Burayı ihtiyacınıza göre artırabilirsiniz */
+  font-family: var(--font-heading);
+  font-size: 5rem;        /* İstediğiniz boyut */
   line-height: 1.2;
-  margin: 60px auto;          /* Üst ve altta boşluk bırakır */
-  max-width: 800px;           /* Satır uzunluğu kontrolü */
+  margin: 60px auto;      /* Üst ve altta boşluk bırakır */
+  max-width: 800px;       /* Satır uzunluğu kontrolü */
 }
