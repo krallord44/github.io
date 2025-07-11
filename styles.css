@@ -83,7 +83,7 @@ nav a:hover {
   padding: var(--hero-padding);
   padding-top: calc(var(--header-height) + 60px);
   background: var(--color-light);
-  display: flex; 
+  display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 15%;              /* metin ile görsel arası boşluk - %15 */
@@ -110,34 +110,26 @@ nav a:hover {
   margin-bottom: 30px;
   color: var(--color-text);
 }
+
+/* 5.a) Butonlar */
 .hero-buttons {
-  display: flex; gap: 20px;
+  display: flex;
+  gap: 20px;
 }
-.btn-outline {
-  border: 2px solid var(--color-accent);
-  color: var(--color-accent);
-  padding: var(--btn-padding);
-  border-radius: var(--btn-radius);
-  text-decoration: none;
-  font-weight: 600;
-  transition: background .2s, color .2s;
+
+/* 5.b) Hero İçinde Metin Banner’ı */
+.hero-content .text-banner {
+  display: inline-block;
+  background: rgba(0, 119, 204, 0.1); /* açık mavi ton */
+  color: var(--color-primary);
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 24px;
+  font-weight: 500;
 }
-.btn-outline:hover {
-  background: var(--color-accent);
-  color: #fff;
-}
-.btn-solid {
-  background: var(--color-accent);
-  color: #fff;
-  padding: var(--btn-padding);
-  border-radius: var(--btn-radius);
-  text-decoration: none;
-  font-weight: 600;
-  transition: background .2s;
-}
-.btn-solid:hover {
-  background: var(--color-accent-alt);
-}
+
+/* 5.c) Hero Görsel */
 .hero-media {
   flex: 0 0 42.5%;       /* sağdaki blok genişliği */
   display: flex;
