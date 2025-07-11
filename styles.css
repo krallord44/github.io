@@ -153,3 +153,16 @@ nav a:hover {
     padding-left: 0;
   }
 }
+/* 7. Hero altındaki metin */
+.hero-subtext {
+  margin-top: 10%;             /* Hero ile arasında yüzde 10 boşluk */
+  text-align: center;          /* ortala (isteğe göre) */
+}
+.hero-subtext p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
